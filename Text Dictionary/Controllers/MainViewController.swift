@@ -69,6 +69,21 @@ class MainViewController: UIViewController {
             }
         }
     }
-
+    
+    
+    @IBAction func convertTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: "to_result", sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "to_result" {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.inputText = inputTextView.text
+        }
+        
+    }
+    
 }
 

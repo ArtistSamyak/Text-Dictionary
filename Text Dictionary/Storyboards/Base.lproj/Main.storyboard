@@ -55,6 +55,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Convert"/>
+                                        <connections>
+                                            <action selector="convertTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="79O-lT-B3g"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -88,17 +91,17 @@
                         <outlet property="fetchDictionaryScrollView" destination="FtD-MR-Et8" id="9l0-YB-Rx4"/>
                         <outlet property="homeView" destination="Itr-Zj-Swd" id="p4A-Kf-wXd"/>
                         <outlet property="inputTextView" destination="UzS-Eb-1gS" id="yXM-lk-Ixk"/>
-                        <segue destination="vo7-dr-CS2" kind="presentation" identifier="to_converted" id="jJ3-2T-VPg"/>
+                        <segue destination="vo7-dr-CS2" kind="presentation" identifier="to_result" id="jJ3-2T-VPg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="81.696428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="rcU-9f-3aQ">
             <objects>
-                <viewController id="vo7-dr-CS2" sceneMemberID="viewController">
+                <viewController id="vo7-dr-CS2" customClass="ResultViewController" customModule="Text_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JQz-5c-wsc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,11 +113,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="162.5" height="40"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Copy"/>
+                                        <connections>
+                                            <action selector="copyButton:" destination="vo7-dr-CS2" eventType="touchUpInside" id="Vxf-zx-TKb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waM-wU-FqJ">
                                         <rect key="frame" x="202.5" y="0.0" width="162.5" height="40"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Done"/>
+                                        <connections>
+                                            <action selector="doneButton:" destination="vo7-dr-CS2" eventType="touchUpInside" id="YNy-tA-am2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -142,6 +151,9 @@
                             <constraint firstItem="9BU-6d-gc5" firstAttribute="top" secondItem="rdX-Bb-gTT" secondAttribute="top" constant="20" id="yPZ-lh-xed"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultTextView" destination="9BU-6d-gc5" id="Xut-P0-65v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9o7-uN-dLB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

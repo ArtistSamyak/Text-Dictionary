@@ -10,6 +10,7 @@
 		4DF130A242089ADC78AB07CF /* Pods_Text_Dictionary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C77AA0065D25D6B7E6D6BC17 /* Pods_Text_Dictionary.framework */; };
 		E3096B08272BFF5600EF00C8 /* MainVCTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3096B07272BFF5600EF00C8 /* MainVCTextViewDelegate.swift */; };
 		E3096B0A272C10FC00EF00C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3096B09272C10FC00EF00C8 /* GoogleService-Info.plist */; };
+		E3096B10272C131D00EF00C8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3096B0F272C131D00EF00C8 /* ResultViewController.swift */; };
 		E3E9C2AE272BCA9C00E4DD56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E9C2AD272BCA9C00E4DD56 /* AppDelegate.swift */; };
 		E3E9C2B0272BCA9C00E4DD56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E9C2AF272BCA9C00E4DD56 /* SceneDelegate.swift */; };
 		E3E9C2B2272BCA9C00E4DD56 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E9C2B1272BCA9C00E4DD56 /* MainViewController.swift */; };
@@ -25,6 +26,7 @@
 		E1D44CB17B49FEADB11994B7 /* Pods-Text Dictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Text Dictionary.debug.xcconfig"; path = "Target Support Files/Pods-Text Dictionary/Pods-Text Dictionary.debug.xcconfig"; sourceTree = "<group>"; };
 		E3096B07272BFF5600EF00C8 /* MainVCTextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCTextViewDelegate.swift; sourceTree = "<group>"; };
 		E3096B09272C10FC00EF00C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E3096B0F272C131D00EF00C8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E3E9C2AA272BCA9C00E4DD56 /* Text Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Text Dictionary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E9C2AD272BCA9C00E4DD56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3E9C2AF272BCA9C00E4DD56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,8 +64,43 @@
 				E1D44CB17B49FEADB11994B7 /* Pods-Text Dictionary.debug.xcconfig */,
 				0024A7DCC455CAA2BCE6EFEA /* Pods-Text Dictionary.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E3096B0B272C127800EF00C8 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				E3E9C2AD272BCA9C00E4DD56 /* AppDelegate.swift */,
+				E3E9C2AF272BCA9C00E4DD56 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		E3096B0C272C129300EF00C8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3E9C2B1272BCA9C00E4DD56 /* MainViewController.swift */,
+				E3096B07272BFF5600EF00C8 /* MainVCTextViewDelegate.swift */,
+				E3096B0F272C131D00EF00C8 /* ResultViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E3096B0D272C12AD00EF00C8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E3E9C2B3272BCA9C00E4DD56 /* Main.storyboard */,
+				E3E9C2BB272BCA9E00E4DD56 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E3096B0E272C12CA00EF00C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E3E9C2B6272BCA9C00E4DD56 /* Text_Dictionary.xcdatamodeld */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E3E9C2A1272BCA9C00E4DD56 = {
@@ -87,16 +124,13 @@
 		E3E9C2AC272BCA9C00E4DD56 /* Text Dictionary */ = {
 			isa = PBXGroup;
 			children = (
-				E3E9C2AD272BCA9C00E4DD56 /* AppDelegate.swift */,
-				E3E9C2AF272BCA9C00E4DD56 /* SceneDelegate.swift */,
-				E3E9C2B1272BCA9C00E4DD56 /* MainViewController.swift */,
-				E3096B07272BFF5600EF00C8 /* MainVCTextViewDelegate.swift */,
-				E3E9C2B3272BCA9C00E4DD56 /* Main.storyboard */,
+				E3096B0E272C12CA00EF00C8 /* Models */,
+				E3096B0B272C127800EF00C8 /* Delegates */,
+				E3096B0C272C129300EF00C8 /* Controllers */,
+				E3096B0D272C12AD00EF00C8 /* Storyboards */,
 				E3E9C2B9272BCA9E00E4DD56 /* Assets.xcassets */,
-				E3E9C2BB272BCA9E00E4DD56 /* LaunchScreen.storyboard */,
 				E3E9C2BE272BCA9E00E4DD56 /* Info.plist */,
 				E3096B09272C10FC00EF00C8 /* GoogleService-Info.plist */,
-				E3E9C2B6272BCA9C00E4DD56 /* Text_Dictionary.xcdatamodeld */,
 			);
 			path = "Text Dictionary";
 			sourceTree = "<group>";
@@ -222,6 +256,7 @@
 				E3E9C2B8272BCA9C00E4DD56 /* Text_Dictionary.xcdatamodeld in Sources */,
 				E3E9C2B0272BCA9C00E4DD56 /* SceneDelegate.swift in Sources */,
 				E3096B08272BFF5600EF00C8 /* MainVCTextViewDelegate.swift in Sources */,
+				E3096B10272C131D00EF00C8 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
